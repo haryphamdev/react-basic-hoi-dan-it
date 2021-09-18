@@ -2,6 +2,7 @@ import React from "react";
 import { withRouter } from "react-router";
 import Color from "../HOC/Color";
 import logo from '../../assets/images/logoChannel.png';
+import { connect } from 'react-redux';
 
 class Home extends React.Component {
 
@@ -13,7 +14,7 @@ class Home extends React.Component {
 
     //HOC: higher order component
     render() {
-        console.log('>>> check props: ', this.props)
+        console.log('>>> check props redux ', this.props.dataRedux)
         return (
             <>
                 <div>
@@ -28,4 +29,12 @@ class Home extends React.Component {
 }
 
 // export default withRouter(Home);
-export default Color(Home);
+
+const mapStateToProps = (state) => {
+    return {
+        dataRedux: state.users
+    }
+}
+
+
+export default connect(mapStateToProps)(Color(Home));
