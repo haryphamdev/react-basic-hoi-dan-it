@@ -7,6 +7,7 @@ class MyComponent extends React.Component {
 
     //key:value
     state = {
+<<<<<<< HEAD
         arrJobs: [
             { id: 'abcJob1', title: 'Developers', salary: '500' },
             { id: 'abcJob2', title: 'Testers', salary: '400' },
@@ -40,6 +41,10 @@ class MyComponent extends React.Component {
     }
     componentDidMount() {
         console.log('>>> run component did mount')
+=======
+        name: 'ERIC',
+        channel: 'Hoi Dan IT',
+>>>>>>> parent of 589a8e0 (video8)
     }
 
     /* 
@@ -47,9 +52,24 @@ class MyComponent extends React.Component {
     fragment
     */
 
+<<<<<<< HEAD
     //re-render
+=======
+
+    handleOnChangeName = (event) => {
+        this.setState({
+            name: event.target.value
+        })
+    }
+
+    handleClickButton = () => {
+        console.log('hit the button')
+        alert('click me')
+    }
+
+>>>>>>> parent of 589a8e0 (video8)
     render() {
-        console.log('>>> call render: ', this.state)
+
         return (
             <>
                 <AddComponent
